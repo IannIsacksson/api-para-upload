@@ -6,11 +6,10 @@ const box = new mongoose.Schema(
             type: String,
             required: true
         },
-        files: [{ type: mongoose.Schema.Types.ObjectId, ref: "File" }]
+        files: [{ type: mongoose.Schema.Types.ObjectId, ref: "file" }]
     },
     {
         timestamps: true
     }
 );
-
 module.exports = mongoose.model("box", box);
